@@ -19,6 +19,19 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
-    }
-  ]
+    },
+    {
+      path: "/Explore",
+      name: "Explore",
+      component: () =>
+      import("./views/Explore.vue")
+    },
+    {
+    path: "/Aohrodite",
+    name: "Aohrodite",
+    component: () =>
+    import("./views/ExploreItem/Aohrodite.vue")
+   },
+  ],
+  mode: 'history'
 });
